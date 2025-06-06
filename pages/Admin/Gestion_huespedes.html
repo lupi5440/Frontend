@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gestión de Huéspedes - Hotel Manager</title>
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../css/dashboard.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="d-flex" id="wrapper">
+
+        <!-- Sidebar -->
+        <div class="border-end sidebar-admin" id="sidebar-wrapper"></div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page content -->
+        <div id="page-content-wrapper" class="w-100">
+
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary border-bottom">
+                <div class="container-fluid">
+                    <button class="btn btn-outline-light" id="sidebarToggle">☰</button>
+                    <span class="navbar-brand ms-3">Gestión de Huéspedes</span>
+                    <div class="ms-auto text-white">Hola, Admin</div>
+                </div>
+            </nav>
+
+            <!-- Main content -->
+            <div class="container-fluid p-4">
+                <h1>Gestión de Huéspedes</h1>
+                <p>Administra el registro, historial y datos de los huéspedes del hotel.</p>
+
+                <!-- Contenido específico de huéspedes -->
+                <table class="table table-striped table-hover mt-4">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Correo Electrónico</th>
+                            <th>Teléfono</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>Juan</td>
+                            <td>Pérez</td>
+                            <td>juanperez@example.com</td>
+                            <td>555-123-4567</td>
+                            <td>
+                                <button class="btn btn-sm btn-primary">Editar</button>
+                                <button class="btn btn-sm btn-danger">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>Ana</td>
+                            <td>Gómez</td>
+                            <td>anagomez@example.com</td>
+                            <td>555-987-6543</td>
+                            <td>
+                                <button class="btn btn-sm btn-primary">Editar</button>
+                                <button class="btn btn-sm btn-danger">Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/sidebar_loader_admin.js"></script>
+    <script src="../../js/sidebar_toogle.js"></script>
+
+</body>
+
+</html>

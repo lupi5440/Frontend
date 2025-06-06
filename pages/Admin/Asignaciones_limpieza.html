@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Asignación de Limpieza - Hotel Manager</title>
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../css/dashboard.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="d-flex" id="wrapper">
+
+        <!-- Sidebar -->
+        <div class="border-end sidebar-admin" id="sidebar-wrapper"></div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page content -->
+        <div id="page-content-wrapper" class="w-100">
+
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary border-bottom">
+                <div class="container-fluid">
+                    <button class="btn btn-outline-light" id="sidebarToggle">☰</button>
+                    <span class="navbar-brand ms-3">Asignacion de limpieza</span>
+                </div>
+            </nav>
+
+            <!-- Main content -->
+            <div class="container-fluid p-4">
+                <h1>Asignación de Limpieza</h1>
+                <p>Gestiona las tareas y asignaciones del equipo de limpieza para mantener las habitaciones en óptimas
+                    condiciones.</p>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID Tarea</th>
+                                <th>Habitación</th>
+                                <th>Empleado</th>
+                                <th>Fecha Programada</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>101</td>
+                                <td>201</td>
+                                <td>María López</td>
+                                <td>2025-06-01</td>
+                                <td><span class="badge bg-warning">Pendiente</span></td>
+                                <td><button class="btn btn-sm btn-success">Marcar como Completado</button></td>
+                            </tr>
+                            <tr>
+                                <td>102</td>
+                                <td>305</td>
+                                <td>Carlos Martínez</td>
+                                <td>2025-06-02</td>
+                                <td><span class="badge bg-success">Completado</span></td>
+                                <td><button class="btn btn-sm btn-secondary" disabled>Completado</button></td>
+                            </tr>
+                            <tr>
+                                <td>103</td>
+                                <td>102</td>
+                                <td>Laura Sánchez</td>
+                                <td>2025-06-03</td>
+                                <td><span class="badge bg-warning">Pendiente</span></td>
+                                <td><button class="btn btn-sm btn-success">Marcar como Completado</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/sidebar_loader_admin.js"></script>
+    <script src="../../js/sidebar_toogle.js"></script>
+
+</body>
+
+</html>

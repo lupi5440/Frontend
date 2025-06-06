@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gestión de Canales - Hotel Manager</title>
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../css/dashboard.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="d-flex" id="wrapper">
+
+        <!-- Sidebar -->
+        <div class="border-end sidebar-admin" id="sidebar-wrapper"></div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page content -->
+        <div id="page-content-wrapper" class="w-100">
+
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary border-bottom">
+                <div class="container-fluid">
+                    <button class="btn btn-outline-light" id="sidebarToggle">☰</button>
+                    <span class="navbar-brand ms-3">Gestion de canales</span>
+                    <div class="ms-auto text-white">Hola, Admin</div>
+                </div>
+            </nav>
+
+            <!-- Main content -->
+            <div class="container-fluid p-4">
+                <h1>Gestión de Canales</h1>
+                <p>Administra los canales de distribución para las reservas, incluyendo portales web, agencias y
+                    plataformas externas.</p>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead class="table-light">
+                            <tr>
+                                <th>ID Canal</th>
+                                <th>Nombre</th>
+                                <th>Tipo</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Booking.com</td>
+                                <td>Online</td>
+                                <td><span class="badge bg-success">Activo</span></td>
+                                <td><button class="btn btn-sm btn-danger">Desactivar</button></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Expedia</td>
+                                <td>Online</td>
+                                <td><span class="badge bg-warning">Pendiente</span></td>
+                                <td><button class="btn btn-sm btn-success">Activar</button></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Agencia Local</td>
+                                <td>Offline</td>
+                                <td><span class="badge bg-success">Activo</span></td>
+                                <td><button class="btn btn-sm btn-danger">Desactivar</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/sidebar_loader_admin.js"></script>
+    <script src="../../js/sidebar_toogle.js"></script>
+
+</body>
+
+</html>

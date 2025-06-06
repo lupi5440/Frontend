@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reportar Fallas - Hotel Manager</title>
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../css/dashboard.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="d-flex" id="wrapper">
+
+        <!-- Sidebar -->
+        <div class="border-end sidebar-admin" id="sidebar-wrapper"></div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page content -->
+        <div id="page-content-wrapper" class="w-100">
+
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary border-bottom">
+                <div class="container-fluid">
+                    <button class="btn btn-outline-light" id="sidebarToggle">☰</button>
+                    <span class="navbar-brand ms-3">Reportar fallos</span>
+                    <div class="ms-auto text-white">Hola, Admin</div>
+                </div>
+            </nav>
+
+            <!-- Main content -->
+            <div class="container-fluid p-4">
+                <h1>Reportar Fallas</h1>
+                <p>Registra nuevas fallas o incidencias para que el equipo de mantenimiento pueda dar seguimiento y
+                    resolverlas oportunamente.</p>
+
+                <form>
+                    <div class="mb-3">
+                        <label for="areaFalla" class="form-label">Área o Departamento</label>
+                        <select class="form-select" id="areaFalla" required>
+                            <option value="" disabled selected>Selecciona un área</option>
+                            <option value="habitaciones">Habitaciones</option>
+                            <option value="recepcion">Recepción</option>
+                            <option value="restaurante">Restaurante</option>
+                            <option value="piscina">Piscina</option>
+                            <option value="lobby">Lobby</option>
+                            <option value="otros">Otros</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="descripcionFalla" class="form-label">Descripción de la Falla</label>
+                        <textarea class="form-control" id="descripcionFalla" rows="4"
+                            placeholder="Describe la falla o problema detectado" required></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="prioridadFalla" class="form-label">Prioridad</label>
+                        <select class="form-select" id="prioridadFalla" required>
+                            <option value="" disabled selected>Selecciona prioridad</option>
+                            <option value="alta">Alta</option>
+                            <option value="media">Media</option>
+                            <option value="baja">Baja</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Enviar Reporte</button>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/sidebar_loader_admin.js"></script>
+    <script src="../../js/sidebar_toogle.js"></script>
+
+    <script>
+        // Form submit handler (solo demostración sin envío real)
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Reporte enviado (funcionalidad de backend no implementada)');
+            form.reset();
+        });
+    </script>
+
+</body>
+
+</html>

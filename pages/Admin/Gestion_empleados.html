@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gestión de Empleados - Hotel Manager</title>
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../css/dashboard.css" rel="stylesheet" />
+    <style>
+        .employee-photo {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .btn-action {
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="d-flex" id="wrapper">
+
+        <!-- Sidebar -->
+        <div class="border-end sidebar-admin" id="sidebar-wrapper"></div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page content -->
+        <div id="page-content-wrapper" class="w-100">
+
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary border-bottom">
+                <div class="container-fluid">
+                    <button class="btn btn-outline-light" id="sidebarToggle">☰</button>
+                    <span class="navbar-brand ms-3">Gestion de empleados</span>
+                    <div class="ms-auto text-white">Hola, Admin</div>
+                </div>
+            </nav>
+
+            <!-- Main content -->
+            <div class="container-fluid p-4">
+                <h1>Gestión de Empleados</h1>
+                <p>Lista de empleados con opciones para modificar o despedir.</p>
+
+                <table class="table table-striped align-middle">
+                    <thead>
+                        <tr>
+                            <th>Foto</th>
+                            <th>Nombre</th>
+                            <th>Horario</th>
+                            <th>Contacto</th>
+                            <th>Papel</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="empleadosTableBody">
+                        <!-- Ejemplo de fila estática -->
+                        <tr>
+                            <td><img src="../images/empleado1.jpg" alt="Foto Juan Pérez" class="employee-photo" /></td>
+                            <td>Juan Pérez</td>
+                            <td>9:00 - 18:00</td>
+                            <td>juan.perez@email.com<br />+52 55 1234 5678</td>
+                            <td>Recepcionista</td>
+                            <td>
+                                <button class="btn btn-sm btn-warning btn-action"
+                                    onclick="modificarEmpleado('Juan Pérez')">Modificar</button>
+                                <button class="btn btn-sm btn-danger"
+                                    onclick="despedirEmpleado('Juan Pérez')">Despedir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="../images/empleado2.jpg" alt="Foto María López" class="employee-photo" /></td>
+                            <td>María López</td>
+                            <td>8:00 - 16:00</td>
+                            <td>maria.lopez@email.com<br />+52 55 8765 4321</td>
+                            <td>Limpieza</td>
+                            <td>
+                                <button class="btn btn-sm btn-warning btn-action"
+                                    onclick="modificarEmpleado('María López')">Modificar</button>
+                                <button class="btn btn-sm btn-danger"
+                                    onclick="despedirEmpleado('María López')">Despedir</button>
+                            </td>
+                        </tr>
+                        <!-- Más filas dinámicas aquí -->
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/sidebar_loader_admin.js"></script>
+    <script src="../../js/sidebar_toogle.js"></script>
+
+    <script>
+        // Funciones simuladas
+        function modificarEmpleado(nombre) {
+            alert('Modificar datos de: ' + nombre + ' (función simulada)');
+        }
+
+        function despedirEmpleado(nombre) {
+            const confirmado = confirm('¿Seguro que quieres despedir a ' + nombre + '?');
+            if (confirmado) {
+                alert(nombre + ' ha sido despedido (simulación).');
+                // Aquí podrías agregar código para eliminar la fila o refrescar la lista
+            }
+        }
+    </script>
+
+</body>
+
+</html>

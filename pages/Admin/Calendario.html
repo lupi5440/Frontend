@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calendario de Reservas - Hotel Manager</title>
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../css/dashboard.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="d-flex" id="wrapper">
+
+        <!-- Sidebar -->
+        <div class="border-end sidebar-admin" id="sidebar-wrapper"></div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page content -->
+        <div id="page-content-wrapper" class="w-100">
+
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary border-bottom">
+                <div class="container-fluid">
+                    <button class="btn btn-outline-light" id="sidebarToggle">☰</button>
+                    <span class="navbar-brand ms-3">Calendario de reservaciones</span>
+                    <div class="ms-auto text-white">Hola, Admin</div>
+                </div>
+            </nav>
+
+            <!-- Main content -->
+            <div class="container-fluid p-4">
+                <h1>Calendario de Reservas</h1>
+                <p>Visualiza y administra las reservas realizadas en el hotel con un calendario mensual.</p>
+
+                <div class="calendar-placeholder border rounded p-4 text-center text-muted">
+                    <!-- Aquí puedes insertar un calendario real o un placeholder -->
+                    <p style="font-size: 1.2rem;">[Calendario Mensual - Implementación futura]</p>
+                    <p>Esta sección mostrará las reservas del mes actual, permitiendo navegar entre meses y días.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/sidebar_loader_admin.js"></script>
+    <script src="../../js/sidebar_toogle.js"></script>
+
+</body>
+
+</html>

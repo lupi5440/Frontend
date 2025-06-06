@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Creación de Servicios - Hotel Manager</title>
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../css/dashboard.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="d-flex" id="wrapper">
+
+        <!-- Sidebar -->
+        <div class="border-end sidebar-admin" id="sidebar-wrapper"></div>
+
+        <!-- Page content -->
+        <div id="page-content-wrapper" class="w-100">
+
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary border-bottom">
+                <div class="container-fluid">
+                    <button class="btn btn-outline-light" id="sidebarToggle">☰</button>
+                    <span class="navbar-brand ms-3">Creación de Servicios</span>
+                </div>
+            </nav>
+
+            <!-- Main content -->
+            <div class="container-fluid p-4">
+                <h1 class="mb-4">Crear Nuevo Servicio</h1>
+
+                <form id="serviceForm" class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label for="serviceName" class="form-label">Nombre del Servicio</label>
+                        <input type="text" class="form-control" id="serviceName" placeholder="Ej. Spa y Bienestar"
+                            required />
+                        <div class="invalid-feedback">El nombre es obligatorio.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="serviceDescription" class="form-label">Descripción</label>
+                        <textarea class="form-control" id="serviceDescription" rows="3"
+                            placeholder="Descripción del servicio" required></textarea>
+                        <div class="invalid-feedback">La descripción es obligatoria.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="servicePrice" class="form-label">Precio (MXN)</label>
+                        <input type="number" min="0" step="0.01" class="form-control" id="servicePrice"
+                            placeholder="900.00" required />
+                        <div class="invalid-feedback">El precio es obligatorio y debe ser positivo.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="serviceImage" class="form-label">Imagen del Servicio</label>
+                        <input class="form-control" type="file" id="serviceImage" accept="image/*" />
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Guardar Servicio</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/sidebar_loader_admin.js"></script>
+    <script src="../../js/sidebar_toogle.js"></script>
+
+    <script>
+        // Validación bootstrap nativa para formulario
+        (() => {
+            'use strict'
+            const form = document.querySelector('#serviceForm')
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                } else {
+                    event.preventDefault()
+                    alert('Servicio guardado correctamente (simulado).')
+                    form.reset()
+                }
+                form.classList.add('was-validated')
+            }, false)
+        })()
+    </script>
+
+</body>
+
+</html>

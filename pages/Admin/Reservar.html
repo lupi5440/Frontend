@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reservar Habitación - Hotel Manager</title>
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../css/dashboard.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="d-flex" id="wrapper">
+
+        <!-- Sidebar -->
+        <div class="border-end sidebar-admin" id="sidebar-wrapper"></div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page content -->
+        <div id="page-content-wrapper" class="w-100">
+
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary border-bottom">
+                <div class="container-fluid">
+                    <button class="btn btn-outline-light" id="sidebarToggle">☰</button>
+                    <span class="navbar-brand ms-3">Reservar Habitación</span>
+                    <div class="ms-auto text-white">Hola, Admin</div>
+                </div>
+            </nav>
+
+            <!-- Main content -->
+            <div class="container-fluid p-4">
+                <h1>Reservar Habitación</h1>
+
+                <form id="reservaForm" novalidate>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre completo</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Juan Pérez" required
+                            minlength="3">
+                        <div class="invalid-feedback">Por favor, ingresa un nombre válido.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" id="email" placeholder="correo@ejemplo.com" required>
+                        <div class="invalid-feedback">Por favor, introduce un correo válido.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="fechaEntrada" class="form-label">Fecha de entrada</label>
+                        <input type="date" class="form-control" id="fechaEntrada" required>
+                        <div class="invalid-feedback">Selecciona una fecha de entrada válida.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="fechaSalida" class="form-label">Fecha de salida</label>
+                        <input type="date" class="form-control" id="fechaSalida" required>
+                        <div class="invalid-feedback">Selecciona una fecha de salida válida.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="tipoHabitacion" class="form-label">Tipo de habitación</label>
+                        <select id="tipoHabitacion" class="form-select" required>
+                            <option value="">Seleccione...</option>
+                            <option value="simple">Simple</option>
+                            <option value="doble">Doble</option>
+                            <option value="suite">Suite</option>
+                        </select>
+                        <div class="invalid-feedback">Selecciona un tipo de habitación.</div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Reservar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/sidebar_loader_admin.js"></script>
+    <script src="../../js/sidebar_toogle.js"></script>
+
+    <script>
+        // Validación de formulario
+        const form = document.getElementById('reservaForm');
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const fechaEntrada = new Date(form.fechaEntrada.value);
+            const fechaSalida = new Date(form.fechaSalida.value);
+            if (fechaSalida <= fechaEntrada) {
+                form.fechaSalida.setCustomValidity('La fecha de salida debe ser posterior a la de entrada.');
+            } else {
+                form.fechaSalida.setCustomValidity('');
+            }
+
+            if (!form.checkValidity()) {
+                form.classList.add('was-validated');
+                return;
+            }
+
+            alert(`Reserva realizada para ${form.nombre.value} del ${form.fechaEntrada.value} al ${form.fechaSalida.value} en una habitación ${form.tipoHabitacion.value}.`);
+
+            form.reset();
+            form.classList.remove('was-validated');
+        });
+    </script>
+
+</body>
+
+</html>

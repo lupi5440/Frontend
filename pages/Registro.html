@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registro - GreenStay</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <style>
+        body,
+        html {
+            height: 100%;
+        }
+
+        .page-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content-wrap {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /* --- ESTILOS DE FONDO CORREGIDOS Y MEJORADOS --- */
+
+            /* 1. Un color oscuro de respaldo por si la imagen no carga */
+            background-color: #1a1a1a;
+
+            /* 2. Tu imagen (con la sintaxis url() correcta) y una capa oscura encima */
+            background-image:
+                linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                /* Capa oscura para legibilidad */
+                url("../assets/img/Fondo.jpg");
+            /* Tu imagen */
+
+            /* 3. Propiedades para que la imagen se ajuste perfectamente */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-container">
+
+        <div id="header-placeholder"></div>
+
+        <div class="content-wrap">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-lg-6">
+                        <div class="card shadow-lg">
+                            <div class="card-header text-center bg-primary text-white">
+                                <h3>Crear una Cuenta</h3>
+                            </div>
+                            <div class="card-body p-4">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="nombre" class="form-label">Nombre(s)</label>
+                                            <input type="text" class="form-control" id="nombre" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="apellidos" class="form-label">Apellidos</label>
+                                            <input type="text" class="form-control" id="apellidos" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Correo electrónico</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="password" class="form-label">Contraseña</label>
+                                        <input type="password" class="form-control" id="password" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="confirm-password" class="form-label">Confirmar Contraseña</label>
+                                        <input type="password" class="form-control" id="confirm-password" required>
+                                    </div>
+                                    <div class="form-check mb-4">
+                                        <input class="form-check-input" type="checkbox" value="" id="terms" required>
+                                        <label class="form-check-label" for="terms">
+                                            Acepto los <a href="../pages/Terminos_condiciones.html">términos y
+                                                condiciones</a>.
+                                        </label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100">Registrarse</button>
+                                </form>
+                                <p class="text-center mt-3">
+                                    ¿Ya tienes una cuenta? <a href="Login.html">Inicia Sesión</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer-placeholder"></div>
+
+    </div>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/foter_header_loader.js"></script>
+</body>
+
+</html>

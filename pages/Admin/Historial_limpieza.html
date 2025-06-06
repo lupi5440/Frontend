@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Historial de Mantenimiento - Hotel Manager</title>
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../css/dashboard.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="d-flex" id="wrapper">
+
+        <!-- Sidebar -->
+        <div class="border-end sidebar-admin" id="sidebar-wrapper"></div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page content -->
+        <div id="page-content-wrapper" class="w-100">
+
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary border-bottom">
+                <div class="container-fluid">
+                    <button class="btn btn-outline-light" id="sidebarToggle">☰</button>
+                    <span class="navbar-brand ms-3">Historial de limpieza</span>
+                    <div class="ms-auto text-white">Hola, Admin</div>
+                </div>
+            </nav>
+
+            <!-- Main content -->
+            <div class="container-fluid p-4">
+                <h1>Historial de Mantenimiento</h1>
+                <p>Consulta el historial de fallas reportadas y mantenimientos realizados para llevar un control
+                    adecuado.</p>
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Área</th>
+                            <th scope="col">Descripción</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Prioridad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">001</th>
+                            <td>2025-05-01</td>
+                            <td>Habitaciones</td>
+                            <td>Fuga de agua en baño habitación 205</td>
+                            <td>Resuelto</td>
+                            <td>Alta</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">002</th>
+                            <td>2025-05-05</td>
+                            <td>Recepción</td>
+                            <td>Problema con aire acondicionado en lobby</td>
+                            <td>En proceso</td>
+                            <td>Media</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">003</th>
+                            <td>2025-05-10</td>
+                            <td>Restaurante</td>
+                            <td>Luz intermitente en zona de comedor</td>
+                            <td>Pendiente</td>
+                            <td>Baja</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/sidebar_loader_admin.js"></script>
+    <script src="../../js/sidebar_toogle.js"></script>
+
+</body>
+
+</html>
