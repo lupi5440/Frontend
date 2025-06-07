@@ -4,9 +4,24 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Detalles de Cuenta - GreenStay</title>
+    <title>Mi Cuenta - GreenStay</title>
     <link href="../../css/bootstrap.min.css" rel="stylesheet" />
     <link href="../../css/dashboard.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        .card-header.bg-primary {
+            color: white !important;
+        }
+
+        .card-header.bg-primary h5 {
+            color: white !important;
+        }
+
+        .card-text {
+            color: #000000;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,55 +31,75 @@
 
         <div id="page-content-wrapper" class="w-100">
 
+            <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary border-bottom">
                 <div class="container-fluid">
                     <button class="btn btn-outline-light" id="sidebarToggle">☰</button>
-                    <span class="navbar-brand ms-3">Detalles de Mi Cuenta</span>
-                    <div class="ms-auto text-white">Hola, Usuario</div>
+                    <span class="navbar-brand ms-3">Resumen de Mi Cuenta</span>
+                    <div class="ms-auto text-white">Hola, usuario</div>
                 </div>
             </nav>
 
+            <!-- Contenido principal -->
             <div class="container-fluid p-4">
-                <h1 class="mb-4">Mis Datos Personales</h1>
-                <div class="card">
+                <h1 class="mb-4">Panel de Cuenta</h1>
+
+                <div class="card mb-4">
+                    <div class="card-header bg-primary d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Datos Personales</h5>
+                        <a href="#" class="btn btn-light btn-sm">Editar Datos</a>
+                    </div>
                     <div class="card-body">
-                        <form>
-                            <h5 class="card-title mb-3">Información de Contacto</h5>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="nombre" class="form-label">Nombre(s)</label>
-                                    <input type="text" class="form-control" id="nombre" value="Juan" required>
+                        <p><strong>Nombres:</strong> DSJFLJDK</p>
+                        <p><strong>Apellidos:</strong> fdjklsfjld</p>
+                        <p class="mb-0"><strong>Correo electrónico:</strong> dsjfljdk.fdjklsfjld@email.com</p>
+                    </div>
+                </div>
+
+                <h3 class="mb-3">Próxima Reserva</h3>
+                <div class="card mb-4">
+                    <div class="card-header bg-primary fw-bold">
+                        Estancia: 15 de Agosto, 2025 - 20 de Agosto, 2025
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Suite de Lujo</h5>
+                        <p class="card-text">Código de reserva: #GS-84321</p>
+                        <p class="card-text">Huéspedes: 2 Adultos</p>
+                        <p class="card-text">Estado: <span class="badge bg-success">Confirmada</span></p>
+                        <a href="mis-reservas.html" class="btn btn-primary mt-2">Ver Todas mis Reservas</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header bg-primary d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Métodos de Pago</h5>
+                        <a href="registrar-tarjeta.html" class="btn btn-light btn-sm">Añadir Tarjeta</a>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <!-- Ejemplo de tarjeta guardada 1 -->
+                            <li class="list-group-item">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6 class="mb-1" style="font-weight: bold; color: #000;"><i
+                                                class="bi bi-credit-card-2-front-fill"></i> Visa terminada en 1234</h6>
+                                        <small class="text-muted" style="font-weight: bold; color: #000;">Expira:
+                                            12/27</small>
+                                    </div>
+                                    <button class="btn btn-outline-danger btn-sm">Eliminar</button>
                                 </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="apellidos" class="form-label">Apellidos</label>
-                                    <input type="text" class="form-control" id="apellidos" value="Pérez" required>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6 class="mb-1"><i class="bi bi-credit-card-2-front-fill"></i> Mastercard
+                                            terminada en 5678</h6>
+                                        <small class="text-muted">Expira: 08/26</small>
+                                    </div>
+                                    <button class="btn btn-outline-danger btn-sm">Eliminar</button>
                                 </div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Correo electrónico</label>
-                                <input type="email" class="form-control" id="email" value="usuario@hotel.com" disabled
-                                    readonly>
-                                <small class="form-text text-muted">El correo electrónico no se puede modificar.</small>
-                            </div>
-
-                            <hr class="my-4">
-
-                            <h5 class="card-title mb-3">Cambiar Contraseña</h5>
-                            <div class="mb-3">
-                                <label for="current-password" class="form-label">Contraseña Actual</label>
-                                <input type="password" class="form-control" id="current-password">
-                            </div>
-                            <div class="mb-3">
-                                <label for="new-password" class="form-label">Nueva Contraseña</label>
-                                <input type="password" class="form-control" id="new-password">
-                            </div>
-                            <div class="mb-3">
-                                <label for="confirm-password" class="form-label">Confirmar Nueva Contraseña</label>
-                                <input type="password" class="form-control" id="confirm-password">
-                            </div>
-
-                            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
-                        </form>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>

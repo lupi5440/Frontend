@@ -1,0 +1,77 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* Color del texto */
+  color: white;
+}
+
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-icon {
+  font-size: 3rem;
+  color: #0d6efd;
+}
+
+.content-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /*Fondo*/
+  background-color: #20465f;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../assets/img/Fondo.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#carouselHotel,
+.carousel-inner,
+.carousel-item {
+  flex: 1;
+}
+
+.carousel-item img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.login-box {
+  background-color: rgba(26, 26, 26, 0.95);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  max-width: 420px;
+  color: #fff;
+}
+
+.form-label {
+  color: #8a6f19;
+}
+
+.btn-primary {
+  background-color: #d4af37;
+  border: none;
+  color: #1a1a1a;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: #c9a033;
+}
+
+input.form-control {
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
