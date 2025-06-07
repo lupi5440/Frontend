@@ -7,30 +7,25 @@
   <title>Inicio de Sesión - GreenStay</title>
   <link rel="stylesheet" href="../css/bootstrap.min.css" />
   <link rel="stylesheet" href="../css/estilos_inicio.css" />
-  <style>
-    .content-wrap {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #f8f9fa;
-    }
-  </style>
 </head>
 
 <body>
   <div class="page-container">
 
+    <!-- Carga del header -->
     <div id="header-placeholder"></div>
 
+    <!-- Contenido principal -->
     <div class="content-wrap">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-8 col-lg-6">
             <div class="card shadow-lg">
+              <!-- Encabezado del formulario -->
               <div class="card-header text-center bg-primary text-white">
                 <h3>Iniciar Sesión</h3>
               </div>
+              <!-- Cuerpo del formulario -->
               <div class="card-body p-4">
                 <form id="loginForm">
                   <div class="mb-3">
@@ -57,12 +52,15 @@
       </div>
     </div>
 
+    <!-- Carga del footer -->
     <div id="footer-placeholder"></div>
+
   </div>
 
   <script src="../js/bootstrap.bundle.min.js"></script>
   <script src="../js/foter_header_loader.js"></script>
 
+  <!-- Script para simular login -->
   <script>
     document.getElementById('loginForm').addEventListener('submit', function (e) {
       e.preventDefault();
