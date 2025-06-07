@@ -30,7 +30,12 @@ html {
 /* Sidebar usuario */
 
 .sidebar-user {
-  background-color: #008259; /*Verde fuerte*/
+  background-color: #233515; /*Verde fuerte*/
+  color: #e2b110; /* dorado */
+}
+
+.sidebar-user .sidebar-heading {
+  background-color: #111855;
   color: #e2b110; /* dorado */
 }
 
@@ -42,10 +47,6 @@ html {
 .sidebar-user .list-group-item:hover {
   background-color: rgba(0, 0, 0, 0.1);
   color: #ff2525;
-}
-.sidebar-user .sidebar-heading {
-  background-color: #fa8072;
-  color: #e2b110; /* dorado */
 }
 
 /* Sidebar admin */

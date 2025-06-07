@@ -7,20 +7,12 @@
     <title>Mi Cuenta - GreenStay</title>
     <link href="../../css/bootstrap.min.css" rel="stylesheet" />
     <link href="../../css/dashboard.css" rel="stylesheet" />
+    <link href="../../css/estilos_inicio.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <style>
-        .card-header.bg-primary {
-            color: white !important;
-        }
 
-        .card-header.bg-primary h5 {
-            color: white !important;
-        }
 
-        .card-text {
-            color: #000000;
-        }
     </style>
 </head>
 
@@ -35,20 +27,23 @@
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary border-bottom">
                 <div class="container-fluid">
                     <button class="btn btn-outline-light" id="sidebarToggle">☰</button>
-                    <span class="navbar-brand ms-3">Resumen de Mi Cuenta</span>
+                    <span class="navbar-brand ms-3">Detalles de cuenta</span>
                     <div class="ms-auto text-white">Hola, usuario</div>
                 </div>
             </nav>
 
             <!-- Contenido principal -->
             <div class="container-fluid p-4">
-                <h1 class="mb-4">Panel de Cuenta</h1>
 
+                <!-- Panel de Cuenta -->
+                <h1 class="mb-4">Panel de Cuenta</h1>
                 <div class="card mb-4">
+                    <!-- Encabezado de la tarjeta -->
                     <div class="card-header bg-primary d-flex justify-content-between align-items-center">
                         <h5 class="mb-0">Datos Personales</h5>
-                        <a href="#" class="btn btn-light btn-sm">Editar Datos</a>
+                        <a href="#" class="btn btn-primary">Editar Datos</a>
                     </div>
+                    <!-- Cuerpo de la tarjeta -->
                     <div class="card-body">
                         <p><strong>Nombres:</strong> DSJFLJDK</p>
                         <p><strong>Apellidos:</strong> fdjklsfjld</p>
@@ -56,11 +51,14 @@
                     </div>
                 </div>
 
+                <!-- Panel de proxima reserva-->
                 <h3 class="mb-3">Próxima Reserva</h3>
                 <div class="card mb-4">
+                    <!-- Encabezado de la tarjeta -->
                     <div class="card-header bg-primary fw-bold">
                         Estancia: 15 de Agosto, 2025 - 20 de Agosto, 2025
                     </div>
+                    <!-- Cuerpo de la tarjeta -->
                     <div class="card-body">
                         <h5 class="card-title">Suite de Lujo</h5>
                         <p class="card-text">Código de reserva: #GS-84321</p>
@@ -70,25 +68,30 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <!-- Metodos de pago-->
+                <h3 class="mb-3">Metodos de pago</h3>
+                <div class="card mb-4">
+                    <!-- Encabezado de la tarjeta -->
                     <div class="card-header bg-primary d-flex justify-content-between align-items-center">
-                        <h5 class="mb-0">Métodos de Pago</h5>
-                        <a href="registrar-tarjeta.html" class="btn btn-light btn-sm">Añadir Tarjeta</a>
+                        <h5 class="mb-0">Tarjetas</h5>
+                        <a href="Registrar_tarjeta.html" class="btn btn-primary">Añadir Tarjeta</a>
                     </div>
+                    <!-- Cuerpo de la tarjeta -->
                     <div class="card-body">
                         <ul class="list-group">
                             <!-- Ejemplo de tarjeta guardada 1 -->
                             <li class="list-group-item">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div>
-                                        <h6 class="mb-1" style="font-weight: bold; color: #000;"><i
-                                                class="bi bi-credit-card-2-front-fill"></i> Visa terminada en 1234</h6>
+                                        <h6 class="mb-1"><i class="bi bi-credit-card-2-front-fill"></i> Visa terminada
+                                            en 1234</h6>
                                         <small class="text-muted" style="font-weight: bold; color: #000;">Expira:
                                             12/27</small>
                                     </div>
                                     <button class="btn btn-outline-danger btn-sm">Eliminar</button>
                                 </div>
                             </li>
+                            <!-- Ejemplo de tarjeta guardada 2 -->
                             <li class="list-group-item">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div>

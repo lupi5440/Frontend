@@ -7,6 +7,7 @@
     <title>Métodos de Pago - GreenStay</title>
     <link href="../../css/bootstrap.min.css" rel="stylesheet" />
     <link href="../../css/dashboard.css" rel="stylesheet" />
+    <link href="../../css/estilos_inicio.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -33,22 +34,28 @@
                 <!-- Metodos de pagos-->
                 <h1 class="mb-4">Administrar Métodos de Pago</h1>
                 <div class="card mb-4">
-                    <div class="card-header">
+                    <!-- Cabecera de la tarjeta -->
+                    <div class="card-header bg-primary text-white">
                         Tarjetas Guardadas
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>💳 Visa terminada en •••• 1234</span>
-                            <button class="btn btn-outline-danger btn-sm">Eliminar</button>
-                        </li>
-                    </ul>
+                    <!-- Cuerpo de la tarjeta -->
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>💳 Visa terminada en •••• 1234</span>
+                                <button class="btn btn-outline-danger btn-sm">Eliminar</button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
                 <!-- Formulario para añadir nueva tarjeta -->
-                <div class="card">
-                    <div class="card-header">
+                <div class="card mb-4">
+                    <!-- Cabecera de la tarjeta -->
+                    <div class="card-header bg-primary text-white">
                         Añadir Nueva Tarjeta
                     </div>
+                    <!-- Cuerpo de la tarjeta -->
                     <div class="card-body">
                         <form>
                             <div class="mb-3">
