@@ -4,48 +4,74 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Detalles de cuenta - Hotel user</title>
+    <title>Mis Reservas - GreenStay</title>
     <link href="../../css/bootstrap.min.css" rel="stylesheet" />
     <link href="../../css/dashboard.css" rel="stylesheet" />
 </head>
 
 <body>
-
     <div class="d-flex" id="wrapper">
 
-        <!-- Sidebar -->
         <div class="border-end sidebar-user" id="sidebar-wrapper"></div>
-        <!-- /#sidebar-wrapper -->
 
-        <!-- Page content -->
         <div id="page-content-wrapper" class="w-100">
 
-            <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary border-bottom">
                 <div class="container-fluid">
                     <button class="btn btn-outline-light" id="sidebarToggle">☰</button>
-                    <span class="navbar-brand ms-3">Habitaciones </span>
+                    <span class="navbar-brand ms-3">Mis Reservas</span>
                     <div class="ms-auto text-white">Hola, Usuario</div>
                 </div>
             </nav>
 
-            <!-- Main content -->
             <div class="container-fluid p-4">
-                <h1 class="mb-4">Detalles de cuenta</h1>
+                <h1 class="mb-4">Mis Estancias en GreenStay</h1>
 
-                <div class="row">
+                <h3 class="mb-3">Próximas Estancias</h3>
+                <div class="card mb-4">
+                    <div class="card-header fw-bold">
+                        Estancia: 15 de Agosto, 2025 - 20 de Agosto, 2025
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Suite de Lujo</h5>
+                        <p class="card-text">Código de reserva: #GS-84321</p>
+                        <p class="card-text">Huéspedes: 2 Adultos</p>
+                        <p class="card-text">Estado: <span class="badge bg-success">Confirmada</span></p>
+                        <a href="#" class="btn btn-primary">Ver Detalles</a>
+                        <a href="#" class="btn btn-outline-danger">Cancelar Reserva</a>
+                    </div>
+                </div>
 
-
+                <h3 class="mt-5 mb-3">Estancias Anteriores</h3>
+                <div class="card mb-3">
+                    <div class="card-header">
+                        Estancia: 10 de Enero, 2025 - 12 de Enero, 2025
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Habitación Doble con Vista al Mar</h5>
+                        <p class="card-text">Código de reserva: #GS-71092</p>
+                        <p class="card-text">Estado: <span class="badge bg-secondary">Completada</span></p>
+                        <a href="#" class="btn btn-secondary">Dejar una Reseña</a>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-header">
+                        Estancia: 05 de Noviembre, 2024 - 08 de Noviembre, 2024
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Bungalow Familiar</h5>
+                        <p class="card-text">Código de reserva: #GS-65531</p>
+                        <p class="card-text">Estado: <span class="badge bg-secondary">Completada</span></p>
+                        <a href="#" class="btn btn-secondary">Ver Factura</a>
+                    </div>
                 </div>
             </div>
-
         </div>
     </div>
 
     <script src="../../js/bootstrap.bundle.min.js"></script>
     <script src="../../js/sidebar_loader_user.js"></script>
     <script src="../../js/sidebar_toogle.js"></script>
-
 </body>
 
 </html>

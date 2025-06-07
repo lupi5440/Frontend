@@ -4,38 +4,68 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Detalles de cuenta - Hotel user</title>
+    <title>Detalles de Cuenta - GreenStay</title>
     <link href="../../css/bootstrap.min.css" rel="stylesheet" />
     <link href="../../css/dashboard.css" rel="stylesheet" />
 </head>
 
 <body>
-
     <div class="d-flex" id="wrapper">
 
-        <!-- Sidebar -->
         <div class="border-end sidebar-user" id="sidebar-wrapper"></div>
-        <!-- /#sidebar-wrapper -->
 
-        <!-- Page content -->
         <div id="page-content-wrapper" class="w-100">
 
-            <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary border-bottom">
                 <div class="container-fluid">
                     <button class="btn btn-outline-light" id="sidebarToggle">☰</button>
-                    <span class="navbar-brand ms-3">Detalles de cuenta </span>
+                    <span class="navbar-brand ms-3">Detalles de Mi Cuenta</span>
                     <div class="ms-auto text-white">Hola, Usuario</div>
                 </div>
             </nav>
 
-            <!-- Main content -->
             <div class="container-fluid p-4">
-                <h1 class="mb-4">Detalles de cuenta</h1>
+                <h1 class="mb-4">Mis Datos Personales</h1>
+                <div class="card">
+                    <div class="card-body">
+                        <form>
+                            <h5 class="card-title mb-3">Información de Contacto</h5>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="nombre" class="form-label">Nombre(s)</label>
+                                    <input type="text" class="form-control" id="nombre" value="Juan" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="apellidos" class="form-label">Apellidos</label>
+                                    <input type="text" class="form-control" id="apellidos" value="Pérez" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Correo electrónico</label>
+                                <input type="email" class="form-control" id="email" value="usuario@hotel.com" disabled
+                                    readonly>
+                                <small class="form-text text-muted">El correo electrónico no se puede modificar.</small>
+                            </div>
 
-                <div class="row">
+                            <hr class="my-4">
 
+                            <h5 class="card-title mb-3">Cambiar Contraseña</h5>
+                            <div class="mb-3">
+                                <label for="current-password" class="form-label">Contraseña Actual</label>
+                                <input type="password" class="form-control" id="current-password">
+                            </div>
+                            <div class="mb-3">
+                                <label for="new-password" class="form-label">Nueva Contraseña</label>
+                                <input type="password" class="form-control" id="new-password">
+                            </div>
+                            <div class="mb-3">
+                                <label for="confirm-password" class="form-label">Confirmar Nueva Contraseña</label>
+                                <input type="password" class="form-control" id="confirm-password">
+                            </div>
 
+                            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                        </form>
+                    </div>
                 </div>
             </div>
 
@@ -45,7 +75,6 @@
     <script src="../../js/bootstrap.bundle.min.js"></script>
     <script src="../../js/sidebar_loader_user.js"></script>
     <script src="../../js/sidebar_toogle.js"></script>
-
 </body>
 
 </html>

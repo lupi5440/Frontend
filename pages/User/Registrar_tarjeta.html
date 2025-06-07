@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Métodos de Pago - GreenStay</title>
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../css/dashboard.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="d-flex" id="wrapper">
+
+        <div class="border-end sidebar-user" id="sidebar-wrapper"></div>
+
+        <div id="page-content-wrapper" class="w-100">
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary border-bottom">
+                <div class="container-fluid">
+                    <button class="btn btn-outline-light" id="sidebarToggle">☰</button>
+                    <span class="navbar-brand ms-3">Métodos de Pago</span>
+                    <div class="ms-auto text-white">Hola, Usuario</div>
+                </div>
+            </nav>
+
+            <div class="container-fluid p-4">
+                <h1 class="mb-4">Administrar Métodos de Pago</h1>
+
+                <div class="card mb-4">
+                    <div class="card-header">
+                        Tarjetas Guardadas
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>💳 Visa terminada en •••• 1234</span>
+                            <button class="btn btn-outline-danger btn-sm">Eliminar</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        Añadir Nueva Tarjeta
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="cardName" class="form-label">Nombre en la Tarjeta</label>
+                                <input type="text" class="form-control" id="cardName" placeholder="Juan A. Pérez"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="cardNumber" class="form-label">Número de la Tarjeta</label>
+                                <input type="text" class="form-control" id="cardNumber"
+                                    placeholder="•••• •••• •••• ••••" required>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="cardExpiry" class="form-label">Fecha de Vencimiento</label>
+                                    <input type="text" class="form-control" id="cardExpiry" placeholder="MM/AA"
+                                        required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="cardCvc" class="form-label">Código de Seguridad (CVV)</label>
+                                    <input type="text" class="form-control" id="cardCvc" placeholder="123" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-success">Guardar Tarjeta</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/sidebar_loader_user.js"></script>
+    <script src="../../js/sidebar_toogle.js"></script>
+</body>
+
+</html>

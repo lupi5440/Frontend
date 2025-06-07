@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Recuperar Contraseña - GreenStay</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <style>
+        body,
+        html {
+            height: 100%;
+        }
+
+        .page-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content-wrap {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Mantenemos el mismo fondo para consistencia visual */
+            background-color: #1a1a1a;
+            background-image:
+                linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url("../assets/img/Fondo.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-container">
+
+        <div id="header-placeholder"></div>
+
+        <div class="content-wrap">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-lg-6">
+                        <div class="card shadow-lg">
+                            <div class="card-header text-center bg-primary text-white">
+                                <h3>Recuperar Contraseña</h3>
+                            </div>
+                            <div class="card-body p-4">
+                                <p class="text-muted text-center mb-4">
+                                    Ingresa tu correo electrónico y te enviaremos un enlace para restablecer tu
+                                    contraseña.
+                                </p>
+
+                                <form id="recoverForm">
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Correo electrónico</label>
+                                        <input type="email" class="form-control" id="email" required
+                                            placeholder="tu.correo@ejemplo.com">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100">Enviar Enlace de
+                                        Recuperación</button>
+                                </form>
+
+                                <p class="text-center mt-3">
+                                    <a href="Login.html">Volver a Inicio de Sesión</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer-placeholder"></div>
+
+    </div>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/foter_header_loader.js"></script>
+
+    <script>
+        // Simulación de la base de datos de usuarios (la misma que en el login)
+        const usuarios = [
+            { email: "admin@hotel.com", password: "admin123", role: "admin" },
+            { email: "usuario@hotel.com", password: "user123", role: "user" }
+        ];
+
+        document.getElementById('recoverForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Evita que la página se recargue
+            const email = document.getElementById('email').value;
+
+            // Simula la búsqueda del usuario
+            const userExists = usuarios.some(user => user.email === email);
+
+            // ¡Importante! Por seguridad, siempre mostramos el mismo mensaje,
+            // exista o no el correo, para evitar que alguien pueda adivinar correos válidos.
+            alert(`Si una cuenta con el correo ${email} existe en nuestro sistema, hemos enviado un enlace de recuperación.`);
+
+            // Opcional: Redirigir al usuario al login después de unos segundos
+            setTimeout(() => {
+                window.location.href = 'Login.html';
+            }, 3000); // 3 segundos de espera
+        });
+    </script>
+</body>
+
+</html>
