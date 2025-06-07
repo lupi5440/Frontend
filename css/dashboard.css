@@ -30,13 +30,11 @@ html {
 /* Sidebar usuario */
 
 .sidebar-user {
-  background-color: #233515; /*Verde fuerte*/
-  color: #e2b110; /* dorado */
+  background-color: #000000;
 }
 
 .sidebar-user .sidebar-heading {
-  background-color: #111855;
-  color: #e2b110; /* dorado */
+  background-color: #b2b23c;
 }
 
 .sidebar-user .list-group-item {
